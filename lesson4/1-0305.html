@@ -17,6 +17,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 .border {
@@ -89,6 +90,8 @@ ver {
     flex-grow: 1; /* Каждая карточка будет занимать всю доступную ширину контейнера */
     overflow: hidden;
     flex: 1;
+    border: 1px solid #ccc;
+
     
 }
 
@@ -97,6 +100,23 @@ ver {
     height: 150px;
     object-fit: cover;
     margin-top: 0;
+}
+.card p {
+    font-size: small;
+    margin: 8px;
+
+}
+.card_name {
+    display: block;
+    margin: 10px 8px 8px 8px;
+    color: dodgerblue;
+    font-size: 1.375em;
+
+}
+.price {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0px 8px 0px 8px;
 }
 
 
@@ -140,7 +160,7 @@ ver {
         </div>
         <div class="row">
             
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <div class="d-none d-sm-inline">
                     
                     <div class="ver">
@@ -156,7 +176,7 @@ ver {
 
                 </div>
             </div>
-            <div class="col-sm-9 content">
+            <div class="col-sm-8 content">
                 <div class="contentrow">
                     <div class="bigimg">
                     </div>
@@ -164,12 +184,31 @@ ver {
                 <div class="contentrow">
                     <div class="card">
                         <img src="https://proffs.tarkett.se/media/img/M/THH_25121917_25131917_25126917_25136917_001.jpg" alt="Card 1">
+                        <span class="card_name">Item one</span>
+                        <span class="price">Price</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                        </p>
                     </div>
                     <div class="card">
                         <img src="https://proffs.tarkett.se/media/img/M/THH_25121917_25131917_25126917_25136917_001.jpg" alt="Card 2">
+                        <span class="card_name">Item two</span>
+                        <span class="price">Price</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                        </p>
                     </div>
                     <div class="card">
                         <img src="https://i0.wp.com/statisticsbyjim.com/wp-content/uploads/2019/05/random_dice.png?fit=600%2C471&ssl=1" alt="Card 3">
+                        <span class="card_name">Item three</span>
+                        <span class="price">Price</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                        </p>
+
                     </div>
                 </div>
             </div>
