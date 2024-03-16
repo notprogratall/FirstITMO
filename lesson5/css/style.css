@@ -1,0 +1,9 @@
+#main {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: rosybrown;
+    box-shadow: 10px 10px 0px ;
+    margin-left: auto;
+    margin-right: auto;
+}
