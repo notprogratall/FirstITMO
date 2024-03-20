@@ -1,7 +1,7 @@
 //console.log('Hello')
 //let x = prompt('Input')
 //window.alert('Value ' + x * 5)
-/*let x = 4
+let x = 4
 let str = 'Pawel'
 let str2 = "Paawel"
 console.log('ST1')
@@ -30,7 +30,8 @@ else {
 //тернарный оператор
 let rezult = (PI > x) ? 'Da' : 'Net' 
 console.log(rezult)
-*/ 
+
+/* 
 console.log('Домашняя работа:');
 
 console.log('-- Первое задание --');
@@ -103,3 +104,4 @@ switch (a) {
     default:
         console.log('Неподходящее значение')
 }
+*/
