@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--или link href="путь к bootstrap.min.css или др. библиотеке" rel="stylesheet"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home</title>
+    <style>
+        .border {
+            border-color: black !important;
+            border: 1px;
+            text-align: center !important;
+        }
+        .hor > li {
+            display: inline-block;
+        }
+        .ver > li {
+            display: block;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col border">Grid bootstrap | What</div>
+    </div>
+    <div class="row">
+        <div class="col border">Ini header
+            <ul class="hor">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 border">
+            <div style="height: 400px;">
+                Ini content
+                        <ul class="ver">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+            </div>    
+        </div>
+
+        
+        <div class="col-sm-4 border">
+            <div class="d-none d-sm-inline">
+                <div style="height: 400px;">
+                    Ini sidebar
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col border">Ini footer</div>
+    </div>
+<div class="d-none d-sm-inline">
+<div class="row ">
+    <div class="col-4 col-sm-3 border bg-success">Column</div>
+    <div class="col-4 col-sm-3 border bg-secondary">Column</div>
+    <div class="col-4 col-sm-3 border bg-primary">Column</div>
+    <div class="col-4 col-sm-3 border text-primary">Column</div>
+    <div class="col-4 col-sm-3 border">Column</div>
+    <div class="col-4 col-sm-3 border">Column</div>
+    <div class="col-4 col-sm-3 border">Column</div>
+    <div class="col-4 col-sm-3 border">Column</div>
+</div>
+</div>
+
+</div>
+</body>
+
+</html>

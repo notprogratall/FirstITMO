@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .container>div {
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 2%;
+        }
+
+        @media (min-width: 601px) {
+        .item1 {
+            grid-column: 1/3;
+        }
+        .item2 {
+            grid-column: 2/4;
+        }
+        }
+
+        @media (min-width: 200px) and (max-width: 600px) {
+            .container {
+                grid-template-columns:  repeat(2, auto);
+
+            } 
+            .item4 {
+                grid-column: 1/3;
+            }
+            .item7 {
+                grid-column: 1/3;
+                
+            }
+            div {
+                background-color: #aff;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">Меню</div>
+        <div class="item3">Логотип</div>
+        <div class="item7">Меню</div>
+        <div class="item4">Текст</div>
+        <div class="item3">Картинка</div>
+        <div class="item3">Картинка</div>
+        <div class="item3">Картинка</div>
+    </div>
+
+
+</body>
+</html>
