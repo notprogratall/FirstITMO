@@ -23,6 +23,4 @@ urlReg = {
     action: all[3],
     id: url.match(/\d+/)[0]
 }
-    url.match(regexp)
-
 console.log(urlReg)
