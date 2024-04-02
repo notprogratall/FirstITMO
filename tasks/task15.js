@@ -7,8 +7,8 @@
 //Функция, определяющая месяц
 let changeMonth = () => {
     let moment = new Date() //Создает объект времени с текущей системную дату и время
-    moment.setMonth(Number(prompt('Введите номер месяца'))-1) // Меняет этому времени месяц на введенный пользователем
-    //moment.setMonth(2)
+    //moment.setMonth(Number(prompt('Введите номер месяца'))-1)
+    moment.setMonth(8)
     moment.setDate(1)
     return moment
 }
@@ -37,8 +37,8 @@ let addPrevious = (startingDay, month) => {
     console.log(startingDay);
     for (let i = 0; i < startingDay; i++) { //Понедельник считаем за 0
         console.log('prevMonthStratingDay works');
-
-        week.push({ month: prevMonth.getMonth(), date: prevMonthStratingDay + i, day: i, cl: 'prevMonth' })
+        prevMonth.setDate(prevMonthStratingDay + i)
+        week.push({ id: prevMonth.toDateString() }) //раньше было { month: prevMonth.getMonth(), date: prevMonthStratingDay + i}
     }
     return week
 }
@@ -52,7 +52,7 @@ let addCurrentMonth = (week, startingDay, month) => {
     for (let weekCount = 0; weekCount <= Math.ceil(Length / 7); weekCount++) {
         //console.log(weekCount + ' ' + (monthLength - weekCount * 7));
         for (let day = startingDay; day % 8 != 0 || day == 0; day++) {
-            week.push({ month: month.getMonth(), date: month.getDate(), day: day - 1, cl: 'currentMonth' })
+            week.push({ id: month.toDateString() }) //раньше было {month: prevMonth.getMonth(), date: prevMonthStratingDay}
             month.setDate(month.getDate() + 1)
         }
         startingDay = 1
@@ -79,8 +79,6 @@ let createCalendar = () => {
     let calendar = addCurrentMonth(startOfWeek, startingDay, month)
     return calendar
 }
-
-
 
 
 console.log(createCalendar());
