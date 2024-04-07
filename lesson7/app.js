@@ -34,3 +34,5 @@ function game(event) {
 let root = document.querySelector('#field')
 root.addEventListener("click", game)
 
+// npx tailwindcss -i ./lesson9/input.css -0 ./lesson9/style.css --watch (если надо обновлять при сохранении)
+// поменять файл html tailwind.config.js
