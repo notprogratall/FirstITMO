@@ -25,8 +25,13 @@ let addPrevious = (startingDay, month) => {
     let prevMonthStratingDay = prevMonthLastDate - startingDay + 1;
     for (let i = 0; i < startingDay; i++) { //Понедельник считаем за 0
         prevMonth.setDate(prevMonthStratingDay + i)
-        week.push({ id: prevMonth.toDateString() }) //раньше было { month: prevMonth.getMonth(), date: prevMonthStratingDay + i}
-    }
+        date = prevMonth.toDateString()
+        //date = date.replace(/^.*(\w{3})\s(\d{1,2})\s(\d{4}).*$/, '$2 $1 $3')
+        //week.push({ id: date }) //month.toDateString() 
+        date = date.match(/^.*(\w{3})\s(\d{1,2})\s(\d{4}).*$/)
+        week.push({ day: date[2], month: date[1], year: date[3]}) //month.toDateString() 
+
+        }
     return week
 }
 
@@ -38,7 +43,10 @@ let addCurrentMonth = (week, startingDay, month) => {
     startingDay++
     for (let weekCount = 0; weekCount <= Math.ceil(Length / 7); weekCount++) {
         for (let day = startingDay; day % 8 != 0 || day == 0; day++) {
-            week.push({ id: month.toDateString() })
+            date = month.toDateString()
+            date = date.match(/^.*(\w{3})\s(\d{1,2})\s(\d{4}).*$/)
+            //week.push({ id:  date}) //month.toDateString()
+            week.push({ day: date[2], month: date[1], year: date[3] })
             month.setDate(month.getDate() + 1)
         }
         startingDay = 1
