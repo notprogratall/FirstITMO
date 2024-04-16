@@ -66,16 +66,6 @@ root.setAttribute('data-id', grid[2][0].month)
 function createHeader() {
     let header = document.querySelector('#header')
     header.className = 'h-10 mx-2.5 mb-1.5 flex justify-between align-middle items-center'
-    
-    // function createButton(text, twClass) {
-    //     let el = document.createElement('button')
-    //     el.setAttribute('type', "button")
-    //     let buttonClasses = 'text-white h-6 min-w-7 rounded truncate flex-nowrap font-sans text-xs p-1.5 flex items-center align-middle'
-    //     el.className = buttonClasses
-    //     let textNode = document.createTextNode(text)
-    //     el.appendChild(textNode)
-    //     header.appendChild(el)
-    // }
 
     let createHorizontalMenu = (array, styles) => {
         let menu = document.createElement('ul')
@@ -86,6 +76,7 @@ function createHeader() {
             li.appendChild(textNode)
             menu.appendChild(li);
         }
+
         menu.className = styles
         addTailwindClasses(menu, 'bg-slate-700', 'h-6', 'rounded', 'flex', 'items-center', 'align-middle')
         header.appendChild(menu)
@@ -105,7 +96,7 @@ function createHeader() {
 
 }
 
-//Создание основных элементов (дат), еще без подзадач
+
 function render(data) {
     data.forEach(week => {
         week.forEach(element => {
@@ -150,6 +141,7 @@ function addTailwindClasses(element, twClass) {
         }
     }
 }
+
 
 createHeader()
 renderDaysOfWeek()

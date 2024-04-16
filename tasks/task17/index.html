@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main flex flex-column">
+
+    <!-- Экран 0 - №0 -->
+    <button type="button" class="screen-0" name="go">Начать игру</button> 
+
+    <!-- Экран 1,2 - контейнер для №1 -->
+    <div class="container screen-1 screen-2" name="field"> </div> 
+
+    <!-- Экран 1 - контейнер для №2  -->
+    <div class="screen-1 flex-column">  
+        <div name="riddle"></div>
+        <div name="count-field">Попыток: 3</div>
+        <div class="error"></div> <!-- для не букв, в зачет игры не идет https://sky.pro/media/kak-sozdat-vsplyvayushhie-okna-pop-up-na-sajte-2/ -->
+        <input type="text" name="letter" id="">
+        <button type="button" name="check">Проверить</button>
+    </div>
+
+    <!-- Экран 2 - контейнер для №3  -->
+    <div class="end-game screen-2 flex-column">
+        <h1></h1>
+        <button type="button" name="new-game">Начать новую игру</button>
+    </div>
+
+</body>
+<script src="./js/app.js"></script>
+
+</html>
