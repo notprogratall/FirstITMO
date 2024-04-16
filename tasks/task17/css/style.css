@@ -1,12 +1,13 @@
 
 .main {
-        background-image: url('../media/bg2.png');
-            /*при расширении окна и при достижении границы изображения (лево или низ), оно 
-            должно увеличиваться(с сохранением пропорций). Окно должно всегда вмещать максимальную площать фона,
-            то есть картинка обрезается либо справа, либо снизу*/
-            background-size: 100vmax 100vmax;
-            background-position-y: top;
-            background-repeat: no-repeat;
+    background-image: url('../media/bg2.png');
+    /*при расширении окна и при достижении границы изображения (лево или низ), оно 
+    должно увеличиваться(с сохранением пропорций). Окно должно всегда вмещать максимальную площать фона,
+    то есть картинка обрезается либо справа, либо снизу*/
+    background-size: 100vmax 100vmax;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
 }
