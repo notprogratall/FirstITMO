@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="task16.css">
 </head>
 
-<body>
-<form>
+<body class="sm:mx-16 sm:m-6 m-6">
+<form class="shadow p-4">
     <div class="space-y-12">
-        <div class="border-b border-gray-900/10 pb-12">
-            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div class="sm:col-span-3">
                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Имя</label>
                     <div class="mt-2">
@@ -54,16 +53,13 @@
                     <div class="mt-2">
                         <textarea id="biography" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                     </div>
-                </div>
-            </div>
-            
+            </div>       
         </div>
     </div>
 </form>
 <div class="mt-6 flex items-center justify-end gap-x-6">
-    <button id="del" class="text-sm font-semibold leading-6 text-gray-900">Сбросить</button>
-    <button id="send"
-        class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Отправить</button>
+    <button id="del" class="shadow-sm rounded-md text-sm px-3 py-2 font-semibold leading-6 text-gray-900 hover:bg-gray-100">Сбросить</button>
+    <button id="send" class="shadow-sm rounded-md text-sm bg-indigo-600 px-3 py-2 font-semibold leading-6 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Отправить</button>
 </div>
 </body>
 <script src="./task20.js"></script>
