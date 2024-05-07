@@ -18,7 +18,7 @@ export let Reader = {
     findReaderMessages: async function () {
         this.userData.lastReaderMsgID = this.findlastReaderMsgID()
         //console.log(JSON.stringify(this.userData));
-        let response = await fetch('http://localhost:8081/tasks/task22/server/data.php', {
+        let response = await fetch('http://localhost:8081/data.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
