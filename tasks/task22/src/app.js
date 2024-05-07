@@ -37,7 +37,7 @@ button.addEventListener('click', function () {
 })
 
 async function sendMessage(item) {
-    let response = await fetch('http://localhost:8081/server/db.php', {
+    let response = await fetch('http://localhost:8081/tasks/task22/server/db.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
