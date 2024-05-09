@@ -2,20 +2,6 @@ import Handlebars, { log } from "handlebars";
 import { Storage } from "./data";
 
 
-const messages = [
-    { id: 1, id_user: 100, name: 'L', message: 'Hiiiiiii'},
-    { id: 2, id_user: 100, name: 'L', message: 'How are you?'},
-    { id: 3, id_user: 200, name: 'M', message: 'Haiy hai'},
-    { id: 4, id_user: 100, name: 'L', message: 'Well?'},
-    { id: 5, id_user: 200, name: 'M', message: 'Well..'},
-    { id: 6, id_user: 200, name: 'M', message: 'What?'},
-    { id: 7, id_user: 100, name: 'L', message: 'How are you doing?'},
-    { id: 8, id_user: 200, name: 'M', message: 'Im fine'},
-    { id: 9, id_user: 100, name: 'L', message: 'Thats all?'},
-    { id: 10, id_user: 200, name: 'M', message: 'Otstan'},
-]
-
-
 const tplMessage = `{{#each messages}}
 {{#if (checkUser id_user)}}
 <div data-id="{{ id }}" class="col-start-1 col-end-8 p-3 rounded-lg">
