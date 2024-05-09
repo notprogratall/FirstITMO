@@ -1,21 +1,21 @@
 export const Storage = {
     addMessage: function (item) {
-        if (!window.sessionStorage['messages']) {
-            window.sessionStorage['messages'] = JSON.stringify([item])
+        if (!window.localStorage['messages']) {
+            window.localStorage['messages'] = JSON.stringify([item])
         } else {
-            const messages = JSON.parse(window.sessionStorage['messages'])
+            const messages = JSON.parse(window.localStorage['messages'])
             messages.push(item)
-            window.sessionStorage['messages'] = JSON.stringify(messages)
+            window.localStorage['messages'] = JSON.stringify(messages)
         }
     },
     getListMessage: function () {
-        if (!window.sessionStorage['messages']) {
+        if (!window.localStorage['messages']) {
             return []
         }
-        return JSON.parse(window.sessionStorage['messages'])
+        return JSON.parse(window.localStorage['messages'])
     },
     destroy: function () {
-        window.sessionStorage.clear()
+        window.localStorage.clear()
     }
 
 

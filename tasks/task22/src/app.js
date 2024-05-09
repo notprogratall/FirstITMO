@@ -28,9 +28,6 @@ button.addEventListener('click', function () {
         let item = { id: myuuid, id_sender: 100, id_reciever: 200, name: 'L', message: String(inputDOM.value) }
         sendMessage(item)
         Chat.addMessage(item)
-
-
-        //Chat.addMessage(item)
         inputDOM.value = ''
         chatRoot.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" })
     }
@@ -51,10 +48,9 @@ async function sendMessage(item) {
     
 }
 
-
-
 delbutton.addEventListener('click', function () {
-        Chat.deleteMessages()
+    Chat.deleteMessages()
+    Reader.removeContent("all")
 });
 
 inputDOM.addEventListener('keypress', function (e) {

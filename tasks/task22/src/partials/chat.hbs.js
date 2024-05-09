@@ -1,5 +1,6 @@
 import Handlebars, { log } from "handlebars";
 import { Storage } from "./data";
+import { Reader } from "../reader.js"
 
 
 // const messages = [
@@ -102,12 +103,14 @@ export const Chat = {
             let storage = Storage.getListMessage()
             for (let i = 0; i < storage.length; i++) {
                 if (storage[i].id === message.getAttribute("data-id")) {
+                    Reader.removeContent(storage[i].id)
+
                     storage.splice(i, 1);
                     break
                 }
             }
             message.remove()
-            window.sessionStorage['messages'] = JSON.stringify(storage)
+            window.localStorage['messages'] = JSON.stringify(storage)
         })
 
     },
